@@ -1,0 +1,112 @@
+/* Base Theme Variables */
+:root {
+    --bg: #f7f7f7;
+    --text: #333;
+    --card-bg: #ffffff;
+    --accent: #2a4d69;
+    --muted: #555;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --bg: #1e1e1e;
+    --text: #e6e6e6;
+    --card-bg: #2a2a2a;
+    --accent: #7ab8ff;
+    --muted: #bbbbbb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid #ccc;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* Sections */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Skills */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+.skills-list i {
+    margin-right: 8px;
+    color: var(--accent);
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.social-links i {
+    margin-right: 6px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background-color: var(--card-bg);
+    color: var(--muted);
+}
